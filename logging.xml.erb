@@ -1,0 +1,35 @@
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="fileAppender" class="LoggerAppenderRollingFile">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date{Y-m-d\TH:i:sO} [%level] %logger - %message%newline%exception" />
+        </layout>
+        <param name="file" value="<%= @petualServerLogFile %>" />
+        <param name="maxFileSize" value="1MB" />
+        <param name="maxBackupIndex" value="5" />
+    </appender>
+    <appender name="workerFileAppender" class="LoggerAppenderRollingFile">
+            <layout class="LoggerLayoutPattern">
+                <param name="conversionPattern" value="%date{Y-m-d\TH:i:sO} [%level] %logger - %message%newline%exception" />
+            </layout>
+            <param name="file" value="<%= @petualServerLogFileWorker %>" />
+            <param name="maxFileSize" value="1MB" />
+            <param name="maxBackupIndex" value="1" />
+        </appender>
+    <logger name="WorkerLog">
+        <level value="TRACE" />
+        <appender_ref ref="workerFileAppender" />
+    </logger>
+    <logger name="WorkerLog.EmailNewWorker"/>
+    <logger name="WorkerLog.MeetingNoResponseWorker"/>
+    <logger name="WorkerLog.MeetingOnHoldWorker"/>
+    <logger name="WorkerLog.MeetingScheduleWorker"/>
+    <logger name="WorkerLog.MeetingTurnOffCopyHostFlagWorker"/>
+    <logger name="WorkerLog.SalesforceInitialWorker"/>
+    <logger name="WorkerLog.SalesforceWorker"/>
+    <logger name="WorkerLog.UnknownWorker"/>
+    <logger name="WorkerLog.UserPlanDowngradeWorker"/>
+    <root>
+        <level value="<%= @petualServerLogLevel %>" />
+        <appender_ref ref="fileAppender" />
+    </root>
+</configuration>

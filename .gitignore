@@ -1,0 +1,32 @@
+### PHP ###
+composer.phar
+vendor
+info.php
+test.php
+configuration.php
+
+
+### Logging ###
+logs/
+logging.xml
+*.log
+*.log.1
+*.log.2
+*.log.3
+*.log.4
+*.log.5
+
+
+### Python ###
+goferConfig.py
+*.pyc
+.pydevproject
+
+# Vagrant Stuff
+*.box
+.vagrant
+
+
+### Intellij IDE ###
+.idea/
+

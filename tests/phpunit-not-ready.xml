@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Started making this - does not work yet-->
+<phpunit
+        colors="false"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        stopOnError="false"
+        stopOnFailure="false">
+    <testsuites>
+        <testsuite name="PhpUnitTests">
+            <directory>./Gofer/</directory>
+        </testsuite>
+    </testsuites>
+
+
+    <filter>
+        <blacklist>
+            <directory>cache</directory>
+            <directory>data</directory>
+            <directory>lib/vendor</directory>
+            <directory>log</directory>
+            <directory>plugins</directory>
+            <directory>web</directory>
+            <directory>code-generators</directory>
+            <directory>daemons</directory>
+            <directory>lambda</directory>
+            <directory>logs</directory>
+            <directory>ssl</directory>
+        </blacklist>
+        <whitelist>
+            <!-- lib subfolders to include -->
+            <directory suffix=".php">src</directory>
+            <exclude>
+                <!-- tests are not covered -->
+                <directory suffix="test.php">.</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

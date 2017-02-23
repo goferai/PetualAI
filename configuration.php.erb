@@ -1,0 +1,36 @@
+<?php
+
+//General
+define('SERVER_ENVIRONMENT','<%= @goferServerEnvironment %>'); 						//Set to either Localhost, Development, Test, Stage, or Production
+
+//MYSQL Connection
+define('MYSQL_HOST','<%= @mySqlHost %>');
+define('MYSQL_USER','<%= @mySqlUser %>');
+define('MYSQL_PASS','<%= @mySqlPassword %>');
+define('MYSQL_DBNAME','gofer');
+
+//NEO4J
+define('NEO4J_HTTP_TYPE','http');
+define('NEO4J_HOST','');
+define('NEO4J_PORT',24789);
+define('NEO4J_USERNAME','');
+define('NEO4J_PASSWORD','');
+
+
+//
+//
+// Constants (Same for All Environments)
+//
+// Only put them here if they do not fit with a specific class. Otherwise put them with that class as a 'const'
+//
+//
+
+define('ENVIRONMENT_LOCALHOST', 'Localhost');
+define('ENVIRONMENT_DEVELOPMENT', 'Development');
+define('ENVIRONMENT_TEST', 'Test');
+define('ENVIRONMENT_PRODUCTION', 'Production');
+
+define('BOOL_TRUE', 'Y');
+define('BOOL_FALSE', 'N');
+
+?>

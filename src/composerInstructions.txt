@@ -1,0 +1,7 @@
+!!! run composer dump-autoload every time you add new files to /Gofer/SDK/Services
+
+WHY
+
+right now we're using PSR4 and it does NOT allow multiple classes inside a single file. So we are using the classmap to include them manually.
+
+!!! So eventually switch those back to individual files.

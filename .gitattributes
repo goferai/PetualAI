@@ -1,0 +1,2 @@
+# Convert shell scripts to LF when committing.
+*.sh eol=lf

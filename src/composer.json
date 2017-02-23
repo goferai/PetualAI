@@ -1,0 +1,28 @@
+{
+    "require": {
+        "anahkiasen/underscore-php": "dev-master",
+        "apache/log4php": "2.3.0",
+        "drewm/mailchimp-api": "^2.2",
+        "google/apiclient": "~1.1.6",
+        "sendgrid/sendgrid": "~4.0",
+        "ramsey/uuid": "^3.1",
+        "ratchet/pawl": "^0.2.2",
+        "react/child-process": "^0.4.0",
+		"graphaware/neo4j-php-client": "^4.0",
+		"stormpath/sdk": "^1.15",
+        "twilio/sdk": "^5.0",
+        "cloudinary/cloudinary_php": "dev-master",
+        "braintree/braintree_php": "^3.16",
+        "willdurand/geocoder": "^3.3",
+        "lcobucci/jwt": "^3.2",
+        "erusev/parsedown": "^1.6",
+        "iboldurev/api-ai-php": "^0.2.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*"
+    },
+    "autoload": {
+        "psr-4": { "Gofer\\": "Gofer/"},
+        "classmap": ["Gofer/SDK/Services"]
+    }
+}
